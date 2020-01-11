@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_tv_show"
+    android:layout_gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="8dp"
+    card_view:cardCornerRadius="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img_poster"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/tv_show_poster"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_toEndOf="@+id/img_poster"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/txt_title"/>
+
+        <TextView
+            android:id="@+id/txt_releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:textColor="@color/colorGrey"
+            android:layout_toEndOf="@+id/img_poster"
+            android:layout_below="@+id/txt_title"
+            android:text="@string/txt_release_date"/>
+
+        <TextView
+            android:id="@+id/txt_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_releaseDate"
+            android:layout_toEndOf="@+id/img_poster"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@string/overview"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
